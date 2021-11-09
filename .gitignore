@@ -19,4 +19,5 @@
 /nbproject
 
 
-/bin
+/bin/*
+/.github/workflows/*
