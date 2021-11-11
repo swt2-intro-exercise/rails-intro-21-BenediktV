@@ -11,4 +11,8 @@ describe "Author Model", type: :model do
         author = Author.new(first_name: "X",last_name: "Y",homepage: "https://bad-harzburg-stiftung.de/das-herbert-ahrens-bilderarchiv/")
         expect(author.name).to eq("X Y")
     end
+    it "should fail the validation if an author is created without a last name" do
+        author = Author.new(first_name: "C", homepage: "wikipdia.de")
+        expect(author).to_not be_valid
+    end
 end
