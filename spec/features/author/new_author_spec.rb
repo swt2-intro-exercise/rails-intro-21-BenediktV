@@ -13,4 +13,11 @@ describe "New author page", type: :feature do
     expect(page).to have_field('author[last_name]')
     expect(page).to have_field('author[homepage]')
   end
+
+  it "should show an error message if an invalid author gets created" do
+    
+    visit new_author_path
+    click_button('Save Author')
+    expect(page).to have_text 'error'
+  end
 end
