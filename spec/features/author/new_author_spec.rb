@@ -17,7 +17,7 @@ describe "New author page", type: :feature do
   it "should show an error message if an invalid author gets created" do
     
     visit new_author_path
-    click_button('Save Author')
+    click_button('Create Author')
     expect(page).to have_text 'error'
   end
 end
