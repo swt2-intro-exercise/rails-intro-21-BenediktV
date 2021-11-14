@@ -1,0 +1,20 @@
+<p>
+    <strong>First Name: </strong>
+    <%= @author.first_name %>
+</p>
+
+<p>
+    <strong>Last Name: </strong>
+    <%= @author.last_name %>
+</p>
+
+<p>
+    <strong>Homepage: </strong>
+    <%= @author.homepage %>
+</p>
+<p>
+<%= @author.name %>
+</p>
+
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= link_to 'Back', authors_path %>
